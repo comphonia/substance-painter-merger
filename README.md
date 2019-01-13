@@ -1,24 +1,34 @@
-Tool: Substance Painter 'Merger'
-Version: 1.0
+## Tool: Substance Painter 'Submerger'
+#### Version: 1.0
+#### Platform: Windows and Mac
 
-Why This?
-Substance painter is amazing with a flaw that is yet to be addressed and that is merging texture sets, usually when I make a 3D model I seperate objects in parts to focus on perfecting them before putting them together as a whole. During this process, the UV layout is also created to focus on texturing a single part then rendering just a single material for a model; Substance fails in this aspect, rather it renders a seperate texture set for every object leaving the artist to try to merge them all into one with a different tool such as photoshop which is a time consuming process. Painter, however has a little handy tool that exports all selected texture sets to Adobe Photoshop for further manipulation. 'Merger' utilizes its output to automate the texture set merging process, saving you hours of work.
+### Why This?
+Substance Painter is a amazing, there is one issue that is yet to be addressed and that is merging texture sets, `submerger` helps solve that. Although not a substance painter plugin, it is used in conjunction with the `Export to Photoshop` plugin, already available in Substance Painter 2018, to help automate the process of merging textures.
 
-After investigating the workflow and structure of the materials imported into photoshop from the 'Export to photoshop tool'
+### How to Use Submerger
+- download `submerger.jsx`
+- export materials sets to photoshop using the `Export to Photoshop` plugin. choose materials you need.
+- In photoshop, navigate to `File > Scripts > Browse` and select the `submerger.jsx` file
+- Thats it! :smiley: navigate to your Substance Photoshop exports folder to find your merged materials.
+##
 
-Heres my workflow for merging textures
- Quite simple, selecting all the layers and dragging them to its matching Map suffix, so tail_normal layers are copied and pasted in head_normal tab in photoshop. The set is now exported as a .png file and I have just one set of that map instead of two.
+Note: you can avoid navigating to the folder everytime by adding the scripts to your `File > Scripts` menu  
 
- Pseudocode
- - regEx find open tabs with the suffix in array _["basecolor","normal","metallic" etc...]
- - assign each tabs path?? to variables
- - loop if suffix exists, 
- - turn on the layer 'snapshot', found it easier to align my textures with snapshot on since it does not have transparency and is consistent among maps.
- - copy all layers
- - paste them to the first element with matching suffix 
- - rename as regEx before _suffix for [0] && append extension .png
- - export to the same folder as path for psd export
+ MacOS: /Applications/Adobe Photoshop [VERSION]/Presets/Scripts/  
+ 
+ Windows: C:/Program Files/Adobe/Adobe Photoshop [VERSION]/Presets/Scripts/
 
- Inconveniences
- - no ES6+ syntax works
- - no proper debugging solution
+### Testing
+This is just a little utility I made to make my life easier, not necessarily a full solution. 
+##### Adobe Photoshop cc2014 & Substance Painter 2018.1
+ - Single mesh with 2 sub-objects or texture set `passed`
+ - Exporting identical maps for both sets `passed`
+ - Exporting non-identical maps (i.e basecolor & normal for set1 and only normal for set2) `passed`
+ - Exporting all
+ 
+ ### Misc
+ Find bugs? feel free to [message me] (https://www.comphonia.com/#contact) or create an issue
+ 
+ Want to fix it yourself? Create a pull request
+ 
+ Want to say thanks with coffee?    [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/X8X5OPHE)
