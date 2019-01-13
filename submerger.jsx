@@ -120,5 +120,5 @@ function saveDocuments() {
         app.activeDocument.saveAs(fileLocation, PNGSaveOptions, true, Extension.LOWERCASE);
     }
 
-    alert("Merge completed, files save in "+ exportPath);
+    alert("Merge completed, files saved in "+ exportPath);
 }
