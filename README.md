@@ -27,7 +27,7 @@ This is just a little utility I made to make my life easier, not necessarily a f
  - Exporting all
  
  ### Misc
- Find bugs? feel free to [message me] (https://www.comphonia.com/#contact) or create an issue
+ Find bugs? feel free to [message me](https://www.comphonia.com/#contact) or create an issue
  
  Want to fix it yourself? Create a pull request
  
