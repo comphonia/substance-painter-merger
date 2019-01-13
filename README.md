@@ -22,4 +22,4 @@ Heres my workflow for merging textures
  Issues
  - no ES6 syntax works
  - count variables changes in a for loop if not set on start so doc.length should be set to a variable before using the var for the range
-
+- no propper debugging solution

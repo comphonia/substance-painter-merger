@@ -14,6 +14,8 @@ var layerNames = [];
 var mapNames = ["basecolor", "normal"];
 
 
+//alert(docs[0].layers[1].name)
+
 //Start
 if (app.documents.length > 0) {
     documentAlloc();
@@ -24,20 +26,40 @@ function documentAlloc() {
     var map1 = [];
     var map2 = [];
     for (i = 0; i < docCount; i++) {
-        
         //alert(mapNames[i])
         for (j = 0; j < mapNames.length; j++) {
-         var patt = new RegExp("\\w+_" + mapNames[j] + ".psd", "i");
-         //if document name contains the pattern add it to an array
+            var patt = new RegExp("\\w+_" + mapNames[j] + ".psd", "i");
+            //if document name contains the pattern add it to an array
             if (patt.test(docs[i].name)) {
-                if(j === 0){
-                    map1.push(docs[i].name);}
-                else if(j === 1){
-                    map2.push(docs[i].name);}
+                if (j === 0) {
+                    map1.push(docs[i]);
+                } else if (j === 1) {
+                    map2.push(docs[i]);
+                }
             }
         }
     }
-    alert(map2)
+  //  alert(map1.length)
+    // Keep the first document with that prefix out of the loop and duplicate others to it
+    for (i = 1; i < map1.length; i++) {
+        for (j = 0; j < map1[i].layers.length; j++) {
+          layerNames.push(map1[i].layers[j].name);
+        }
+   
+    //   alert(map1[1])
+       
+        for (k = 0; k < layerNames.length; k++) {
+            //  alert(map1[1])
+            //duplicate each layer to its [primary_map]
+            app.activeDocument = map1[i];
+            app.activeDocument.artLayers.getByName(layerNames[k]).duplicate(map1[0], ElementPlacement.PLACEATBEGINNING);
+         //alert(layerNames[k])
+        }
+      //alert(layerNames.length)
+
+        //reset layer obj when done
+       layerNames = [];
+    }
 }
 
 // store layers in the current document in an array before duplicating
