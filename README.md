@@ -19,7 +19,6 @@ Heres my workflow for merging textures
  - rename as regEx before _suffix for [0] && append extension .png
  - export to the same folder as path for psd export
 
- Issues
- - no ES6 syntax works
- - count variables changes in a for loop if not set on start so doc.length should be set to a variable before using the var for the range
-- no propper debugging solution
+ Inconveniences
+ - no ES6+ syntax works
+ - no proper debugging solution
