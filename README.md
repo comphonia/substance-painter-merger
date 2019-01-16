@@ -10,6 +10,7 @@ Substance Painter is a amazing, there is one issue that is yet to be addressed a
 - export materials sets to photoshop using the `Export to Photoshop` plugin. choose materials you need.
 - In photoshop, navigate to `File > Scripts > Browse` and select the `submerger.jsx` file
 - Thats it! :smiley: navigate to your Substance Photoshop exports folder to find your merged materials.
+> :video_camera: [Youtube Tutorial](https://www.youtube.com/watch?v=_XI0rpOZBD0) 
 ##
 
 Note: you can avoid navigating to the folder everytime by adding the scripts to your `File > Scripts` menu  
@@ -17,8 +18,6 @@ Note: you can avoid navigating to the folder everytime by adding the scripts to 
  MacOS: /Applications/Adobe Photoshop [VERSION]/Presets/Scripts/  
  
  Windows: C:/Program Files/Adobe/Adobe Photoshop [VERSION]/Presets/Scripts/
-
-> :video_camera: [Youtube Tutorial](https://www.youtube.com/watch?v=_XI0rpOZBD0) 
 
 ### Testing
 This is just a little utility I made to make my life easier, not necessarily a full solution. 
