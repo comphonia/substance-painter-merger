@@ -18,7 +18,8 @@ Note: you can avoid navigating to the folder everytime by adding the scripts to 
  
  Windows: C:/Program Files/Adobe/Adobe Photoshop [VERSION]/Presets/Scripts/
 
->> :video_camera: [Youtube Tutorial](https://www.youtube.com/watch?v=_XI0rpOZBD0) 
+> :video_camera: [Youtube Tutorial](https://www.youtube.com/watch?v=_XI0rpOZBD0) 
+
 ### Testing
 This is just a little utility I made to make my life easier, not necessarily a full solution. 
 ##### Adobe Photoshop cc2014 & Substance Painter 2018.1
