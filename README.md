@@ -18,13 +18,15 @@ Note: you can avoid navigating to the folder everytime by adding the scripts to 
  
  Windows: C:/Program Files/Adobe/Adobe Photoshop [VERSION]/Presets/Scripts/
 
+>> :video_camera: [Youtube Tutorial](https://www.youtube.com/watch?v=_XI0rpOZBD0) 
 ### Testing
 This is just a little utility I made to make my life easier, not necessarily a full solution. 
 ##### Adobe Photoshop cc2014 & Substance Painter 2018.1
- - Single mesh with 2 sub-objects or texture set `passed`
+ - Single mesh with 2 or more sub-objects or texture set `passed`
  - Exporting identical maps for both sets `passed`
  - Exporting non-identical maps (i.e basecolor & normal for set1 and only normal for set2) `passed`
- - Exporting all
+ - Exporting all map sets `passed`
+ - Some map names such as `04 default` - `failed` since the regEx does not account for the spacing
  
  ### Misc
  Find bugs? feel free to [message me](https://www.comphonia.com/#contact) or create an issue
