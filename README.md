@@ -26,7 +26,7 @@ This is just a little utility I made to make my life easier, not necessarily a f
  - Exporting identical maps for both sets `passed`
  - Exporting non-identical maps (i.e basecolor & normal for set1 and only normal for set2) `passed`
  - Exporting all map sets `passed`
- - Some map names such as `04 default` - `failed` since the regEx does not account for the spacing
+ - Some map names such as `04 default` - `failed` since the regEx does not account for the spacing, will be fixed in next update.
  
  ### Misc
  Find bugs? feel free to [message me](https://www.comphonia.com/#contact) or create an issue
