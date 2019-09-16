@@ -24,7 +24,7 @@ if (app.documents.length > 0) {
     mergeMaps();
 }
 
-// creates the mapNames array based on the _mapSuffix in every open document || tab
+// creates the mapNames array based on the _mapSuffix(.normal, .height etc.) in every open document || tab
 function buildMapNames() {
     for (i = 0; i < docCount; i++) {
         var patt = new RegExp("\\w+_\\w+.psd", "i");
@@ -38,7 +38,7 @@ function buildMapNames() {
             mapNames.push(map);
         }
     }
-    //cant use includes so for-loop to check & make unique mapnames
+    //can't use 'set' et al. so for-loop to check & make unique mapnames
     for (j = 0; j < mapNames.length; j++) {
         for (k = 1; k < mapNames.length - 1; k++) {
             if (mapNames[k] === mapNames[j]) {
@@ -51,10 +51,9 @@ function buildMapNames() {
     for (j = 0; j < mapNames.length; j++) {
         mapSet.push([]);
     }
-
 }
 
-// gathers all documents, assigns a master [_mapSuffix] map type and call methods to perform the duplicate and merge from others to master
+// gathers all documents with the same suffix to a single array
 function gatherMaps(){
         for (i = 0; i < docCount; i++) {
             //alert(mapNames[i])
@@ -72,7 +71,7 @@ function gatherMaps(){
         }
 }
 
-// duplicate maps from like documents to the first
+// merges maps in array with the same suffix to the first ([primary_map]) of their type
 function mergeMaps() {
     // Keep the first document with that prefix out of the loop and gather each layer
     for (a = 0; a < mapSet.length; a++) {
@@ -89,11 +88,11 @@ function mergeMaps() {
                 app.activeDocument = map1[0];
                 app.activeDocument.artLayers.getByName("snapshot").visible = false;
             }
-            // normal maps need to have the background turned off after duplicating
+            // normal maps need to have the background turned off after duplicating since its order in layer overlays others
             var patt = new RegExp("\\w+_normal.psd", "i");
             if (patt.test(app.activeDocument.name)) {
                 var bg = app.activeDocument.artLayers;
-                bg[0].visible = false; //hard coded since duplication is stacked top-bottom
+                bg[0].visible = false; //hard coded since duplication is stacked (bottom to top), the top element would be turned off
             }
 
             //reset layer obj when done
