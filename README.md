@@ -1,3 +1,4 @@
+![Travis (.org)](https://img.shields.io/travis/comphonia/substance-painter-merger)
 ## Tool: Substance Painter 'Submerger'
 #### Version: 1.0
 #### Platform: Windows and Mac
