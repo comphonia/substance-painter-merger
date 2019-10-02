@@ -1,0 +1,32 @@
+{
+  "name": "submerger",
+  "version": "1.1.0",
+  "description": "a photoshop merging tool for substance painter texture sets",
+  "main": "submerger.jsx",
+  "scripts": {
+    "test": "jshint src/submerger.jsx",
+    "build": "extendscriptr --script src/submerger.jsx --output dist/submerger.jsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comphonia/substance-painter-merger.git"
+  },
+  "keywords": [
+    "substance",
+    "jsx",
+    "photoshop",
+    "textures",
+    "pbr"
+  ],
+  "author": "comphonia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comphonia/substance-painter-merger/issues"
+  },
+  "homepage": "https://github.com/comphonia/substance-painter-merger#readme",
+  "devDependencies": {
+    "extendscriptr": "^1.2.4",
+    "jshint": "^2.10.2"
+  },
+  "dependencies": {}
+}
