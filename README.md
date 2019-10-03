@@ -35,7 +35,7 @@ This is just a little utility I made to make my life easier, not necessarily a f
  - Some map names such as `04 default` - `failed v1.0.0` since the regEx does not account for the spacing, will be fixed in next update.
 
  ### Developers
- Photoshop, like most adobe products still use es3, might be hard trying to figure out what functions or keywords to use so from `v1.0.1`, [extendscriptr](https://www.npmjs.com/package/extendscriptr) will be used for polyfill. 
+ Photoshop, like most adobe products, still use es3, so from `v1.0.1`, [extendscriptr](https://www.npmjs.com/package/extendscriptr) will be used for polyfilling so you any ES4+ JS environment for development. 
  - Clone the repo
  - Make changes to the `src/submerger.jsx`
  - Run code analysis `npm run test`
