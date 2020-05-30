@@ -372,7 +372,7 @@ if (typeof (String.prototype.localeCompare) === 'undefined') {
 /*
  Author: Everistus Akpabio | Comphonia
  Licence: MIT License
- Version: 1.1.0
+ Version: 1.1.1
 */
 // object holds all documents || open tabs
 var docs = app.documents; // count of all open documents || tabs
@@ -462,7 +462,7 @@ function mergeLayers() {
         try {
           var bg = app.activeDocument.artLayers.getByName("Background");
           if (bg !== null && bg !== undefined) bg.remove();
-        } catch (error) {// alert("not found")
+        } catch (error) {// alert(error)
         }
       } //remove snapshot
 
@@ -470,11 +470,14 @@ function mergeLayers() {
       try {
         var snap = app.activeDocument.artLayers.getByName("snapshot");
         if (snap !== null && snap !== undefined) snap.remove();
-      } catch (error) {} // alert("not found")
+      } catch (error) {} // alert(error)
       // merge layers
 
 
-      app.activeDocument.mergeVisibleLayers();
+      try {
+        app.activeDocument.mergeVisibleLayers();
+      } catch (error) {// alert(error)
+      }
 
       for (var i = 0; i < app.activeDocument.artLayers.length; i++) {
         if (app.activeDocument.artLayers[i].visible == false) app.activeDocument.artLayers[i].remove();
