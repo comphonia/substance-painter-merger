@@ -1,5 +1,5 @@
 ## Tool: Substance Painter 'Submerger'
-#### Version: 1.0
+#### Version: 1.1.1
 #### Platform: Windows and Mac
 
 ### Why This?
@@ -31,8 +31,9 @@ This is just a utility I created to automate the map merging process not necessa
  - Some map names such as `04 default` - `failed v1.0.0` since the regEx does not account for the spacing, will be fixed in a future update.
 
  ### Developers
- Photoshop, like most adobe products still use es3, might be hard trying to figure out what functions or keywords to use so from `v1.0.1`, [extendscriptr](https://www.npmjs.com/package/extendscriptr) will be used for polyfill. 
+ 
  - Clone the repo
+ - Run `npm install` to install dependencies
  - Make changes to the `src/submerger.jsx`
  - Run code analysis `npm run test`
  - Build code `npm run build`
