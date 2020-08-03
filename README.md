@@ -1,3 +1,7 @@
+[![Travis (.org)](https://img.shields.io/travis/comphonia/substance-painter-merger)](https://travis-ci.com/comphonia/substance-painter-merger)
+![Issues](https://img.shields.io/github/issues/comphonia/substance-painter-merger)
+![Github Stars](https://img.shields.io/github/stars/comphonia/substance-painter-merger)
+![License](https://img.shields.io/github/license/comphonia/substance-painter-merger)
 ## Tool: Substance Painter 'Submerger'
 #### Version: 1.1.1
 #### Platform: Windows and Mac
